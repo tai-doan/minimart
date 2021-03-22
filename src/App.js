@@ -1,25 +1,15 @@
-import logo from './logo.svg';
+import React, { Suspense } from 'react';
+import { Routers } from './routes/index';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="trinhatslution-app">
+      <Suspense fallback={''}>
+        <Routers />
+      </Suspense>
     </div>
   );
-}
+};
 
 export default App;

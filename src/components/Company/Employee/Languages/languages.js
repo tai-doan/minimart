@@ -1,0 +1,40 @@
+export const LANGUAGE_COMPONENT = {
+    vi: {
+        PAGE_TITLE: 'Quản lý nhân viên',
+        EMPLOYEE_SEARCH_PAGE: 'Quản lý nhân viên',
+        EMPLOYEE_NEW_PAGE: 'Thêm mới nhân viên',
+        EMPLOYEE_CLONE_PAGE: 'Sao chép thông tin nhân viên',
+        EMPLOYEE_EDIT_PAGE: 'Chỉnh sửa thông tin nhân viên',
+        EMPLOYEE_VIEW_PAGE: 'Xem thông tin nhân viên',
+        EMPLOYEE_GENERAL_INFOR: 'Thông tin chung',
+        EMPLOYEE_ADDITIONAL_INFOR: 'Thông tin thêm',
+        EMPLOYEE_CODE: 'Mã nhân viên',
+        EMPLOYEE_NAME: 'Tên nhân viên',
+        EMPLOYEE_BRANCH: 'Chi nhánh',
+        EMPLOYEE_EMAIL: 'Email',
+        EMPLOYEE_NUMBERPHONE: 'Số điện thoại',
+        EMPLOYEE_PASSPORT: 'CMND',
+        EMPLOYEE_BIRTHDAY: 'Ngày sinh',
+        EMPLOYEE_ADDRESS: 'Địa chỉ',
+        EMPLOYEE_DESCRIPTION: 'Mô tả'
+    },
+    en: {
+        PAGE_TITLE: 'Screen name management',
+        EMPLOYEE_SEARCH_PAGE: 'Screen name management',
+        EMPLOYEE_NEW_PAGE: 'Add new screen name',
+        EMPLOYEE_CLONE_PAGE: 'Copy screen name',
+        EMPLOYEE_EDIT_PAGE: 'Edit screen name',
+        EMPLOYEE_VIEW_PAGE: 'View screen name',
+        EMPLOYEE_GENERAL_INFOR: 'General infornation',
+        EMPLOYEE_ADDITIONAL_INFOR: 'Additional information',
+        EMPLOYEE_CODE: 'Screen code',
+        EMPLOYEE_NAME: 'Screen name',
+        EMPLOYEE_BRANCH: 'Chi nhánh',
+        EMPLOYEE_EMAIL: 'Email',
+        EMPLOYEE_NUMBERPHONE: 'Số điện thoại',
+        EMPLOYEE_PASSPORT: 'CMND',
+        EMPLOYEE_BIRTHDAY: 'Sinh nhật',
+        EMPLOYEE_ADDRESS: 'Địa chỉ',
+        EMPLOYEE_DESCRIPTION: 'Description'
+    }
+};
