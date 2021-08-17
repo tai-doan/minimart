@@ -1,0 +1,13 @@
+{
+    "company": "Company",
+    "system": "System",
+    "product": "Product",
+    "store": "Store",
+    "branch": "Branch",
+    "customer": "Customer",
+    "employee": "Employee",
+    "parameter": "Parameter",
+    "user": "User",
+    "product_category": "Product category"
+
+}

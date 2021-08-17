@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import jsonQuery from 'json-query';
 import { Layout, Button, Modal } from 'antd';
 import { ExclamationCircleOutlined } from '@ant-design/icons';
@@ -17,6 +18,7 @@ const { Content } = Layout;
 const { confirm } = Modal;
 
 const BranchList = () => {
+    const { t } = useTranslation()
     const mainLanguage = ['vi', 'en'];
     const language = jsonQuery([mainLanguage[0]], { data: LANGUAGE_COMPONENT }).value;
     const commonLanguage = jsonQuery([mainLanguage[0]], { data: TNS_LANGUAGE_COMPONENTS }).value;
@@ -34,6 +36,10 @@ const BranchList = () => {
         sortFields: getFieldSort(),
         sortAsc: true
     });
+
+    useEffect(() => {
+        onSearch()
+    }, [])
 
     // Gọi chạy khi nhấn tìm kiếm
     const onSearchForm = (value, option) => {

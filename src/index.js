@@ -4,6 +4,7 @@ import './index.css';
 import 'antd/dist/antd.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import i18n from './i18n'
 
 ReactDOM.render(
   <React.StrictMode>
