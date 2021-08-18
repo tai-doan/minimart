@@ -8,6 +8,8 @@
     "employee": "Nhân viên",
     "parameter": "Tham số",
     "user": "Người dùng",
-    "product_category": "Danh mục sản phẩm"
+    "product_category": "Danh mục sản phẩm",
+    "product_code_require": "Mã sản phẩm là bắt buộc",
+    "product_name_require": "Tên sản phẩm là bắt buộc"
 
 }

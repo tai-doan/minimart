@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Button, Modal, Form, Input, Row, Col, Tabs } from 'antd';
 import jsonQuery from 'json-query';
 import { TNS_MODE, TNS_SCREEN, TNS_METHOD, ITEM_LAYOUT, TNS_RESULT_CODE, TNS_NOTICATION_TYPE, TNS_LANGUAGE_COMPONENTS, TNS_DISPLAY_AREA_STORAGE } from '../../../commons';
@@ -15,6 +16,7 @@ const { TabPane } = Tabs;
 const screenNo = TNS_SCREEN.Product;
 
 const ProductAddCloneModel = ({ visible, value, onCreate, onCancel, mainLanguage, language, commonLanguage, mode }) => {
+    const { t } = useTranslation()
     const [form] = Form.useForm();
     const [displayDefaultFieldOnAddCloneForm, setDisplayDefaultFieldOnAddCloneForm] = useState(getFieldModal());
     const [defaultModel, setDefaultModel] = useState(value);
@@ -114,6 +116,7 @@ const ProductAddCloneModel = ({ visible, value, onCreate, onCancel, mainLanguage
                         <Row gutter={[16, 0]}>
                             <Col span={12} className={`tns-field-item ${TNS_METHOD.checkAvailableField(displayDefaultFieldOnAddCloneForm, 'Product_Code')}`}>
                                 <Form.Item name='Product_Code'
+                                    tooltip={t('product_code_require')}
                                     shouldUpdate={true}
                                     label={language.PRODUCT_CODE}
                                     rules={[
@@ -129,6 +132,7 @@ const ProductAddCloneModel = ({ visible, value, onCreate, onCancel, mainLanguage
 
                             <Col span={12} className={`tns-field-item ${TNS_METHOD.checkAvailableField(displayDefaultFieldOnAddCloneForm, 'Product_Name')}`}>
                                 <Form.Item name='Product_Name'
+                                    tooltip={t('product_name_require')}
                                     shouldUpdate={true}
                                     label={language.PRODUCT_NAME}
                                     rules={[
@@ -243,7 +247,7 @@ const ProductAddClone = ({ allowAccess, actionLabel, mode, onSave, mainLanguage,
     const language = jsonQuery([mainLanguage[0]], { data: LANGUAGE_COMPONENT }).value;
     const commonLanguage = jsonQuery([mainLanguage[0]], { data: TNS_LANGUAGE_COMPONENTS }).value;
     const [visible, setVisible] = useState(false);
-    const [defaultValue, setDefaultValue] = useState({...defaultValueModal});
+    const [defaultValue, setDefaultValue] = useState({ ...defaultValueModal });
 
     const checkShowModel = () => {
         if (mode === TNS_MODE.Clone) {
@@ -266,7 +270,7 @@ const ProductAddClone = ({ allowAccess, actionLabel, mode, onSave, mainLanguage,
                 }
             }
         } else {
-            setDefaultValue({...defaultValueModal});
+            setDefaultValue({ ...defaultValueModal });
             setVisible(true);
         }
     };

@@ -147,54 +147,57 @@ const ProductList = () => {
                     onChange={onSearchChange}
                     onSearch={onSearchForm}
                 />
-                <span className='main-screen-button-area'>
-                    <Button type='primary' onClick={onSearch}>{commonLanguage.SEARCH}</Button>
+                <div className='main-screen-button-area flex justify-content-between align-items-center'>
+                    <span className='flex'>
+                        <Button type='primary' onClick={onSearch}>{commonLanguage.SEARCH}</Button>
 
-                    <ProductAddClone allowAccess={true}
-                        actionLabel={commonLanguage.NEW}
-                        mode={TNS_MODE.Add}
-                        onSave={onSearch}
-                        mainLanguage={mainLanguage}
-                        value={selectedModel} />
+                        <ProductAddClone allowAccess={true}
+                            actionLabel={commonLanguage.NEW}
+                            mode={TNS_MODE.Add}
+                            onSave={onSearch}
+                            mainLanguage={mainLanguage}
+                            value={selectedModel} />
 
-                    <ProductAddClone allowAccess={true}
-                        actionLabel={commonLanguage.CLONE}
-                        mode={TNS_MODE.Clone}
-                        onSave={onSearch}
-                        mainLanguage={mainLanguage}
-                        value={selectedModel} />
+                        <ProductAddClone allowAccess={true}
+                            actionLabel={commonLanguage.CLONE}
+                            mode={TNS_MODE.Clone}
+                            onSave={onSearch}
+                            mainLanguage={mainLanguage}
+                            value={selectedModel} />
 
-                    <ProductEditView allowAccess={true}
-                        actionLabel={commonLanguage.EDIT}
-                        mode={TNS_MODE.Edit}
-                        onSave={onSearch}
-                        mainLanguage={mainLanguage}
-                        value={selectedModel} />
+                        <ProductEditView allowAccess={true}
+                            actionLabel={commonLanguage.EDIT}
+                            mode={TNS_MODE.Edit}
+                            onSave={onSearch}
+                            mainLanguage={mainLanguage}
+                            value={selectedModel} />
 
-                    <ProductEditView allowAccess={true}
-                        actionLabel={commonLanguage.VIEW}
-                        mode={TNS_MODE.View}
-                        onSave={onSearch}
-                        mainLanguage={mainLanguage}
-                        value={selectedModel} />
+                        <ProductEditView allowAccess={true}
+                            actionLabel={commonLanguage.VIEW}
+                            mode={TNS_MODE.View}
+                            onSave={onSearch}
+                            mainLanguage={mainLanguage}
+                            value={selectedModel} />
 
-                    <Button type='primary' onClick={onDelete}>{commonLanguage.DELETE}</Button>
-
-                    <Tns_DisplayFieldOnSearchScreen mainLanguage={mainLanguage}
-                        className='product-search-screen'
-                        columns={columns}
-                        searchColumns={columnSearchForm}
-                        searchResultColumns={columnSearchForm}
-                        sortType={searchOption.sortAsc}
-                        sortField={searchOption.sortFields}
-                        searchField={fieldOnSearchForm}
-                        searchResultField={fieldOnSearchResult}
-                        sortTypeChange={onSortTypeChange}
-                        sortFieldChange={onSortFieldChange}
-                        searchFieldChange={onSearchFieldChange}
-                        searchResultFieldChange={onSearchResultFieldChange}
-                    />
-                </span>
+                        <Button type='primary' onClick={onDelete}>{commonLanguage.DELETE}</Button>
+                    </span>
+                    <span className='flex'>
+                        <Tns_DisplayFieldOnSearchScreen mainLanguage={mainLanguage}
+                            className='product-search-screen'
+                            columns={columns}
+                            searchColumns={columnSearchForm}
+                            searchResultColumns={columnSearchForm}
+                            sortType={searchOption.sortAsc}
+                            sortField={searchOption.sortFields}
+                            searchField={fieldOnSearchForm}
+                            searchResultField={fieldOnSearchResult}
+                            sortTypeChange={onSortTypeChange}
+                            sortFieldChange={onSortFieldChange}
+                            searchFieldChange={onSearchFieldChange}
+                            searchResultFieldChange={onSearchResultFieldChange}
+                        />
+                    </span>
+                </div>
 
                 <Tns_ResultTable data={dataTable}
                     columns={columns}

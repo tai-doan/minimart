@@ -48,16 +48,17 @@ const Tns_DisplayFieldOnSearchScreen = ({ className, style, mainLanguage, column
         sortFieldChange(fieldSort);
         searchFieldChange(fieldSearch);
         searchResultFieldChange(fieldSearchResult);
+        setVisible(false);
     };
 
     return (
         <span className={className} style={style}>
-            <Tooltip placement='leftBottom' title={language.TITLE} >
+            <Tooltip placement='topRight' title={language.TITLE} >
                 <SettingOutlined onClick={onShowDrawer} style={{ marginBottom: 5, fontSize: 25, verticalAlign: 'middle' }} />
             </Tooltip>
 
             <Drawer title={language.TITLE}
-                width={'30vw'}
+                width={'25vw'}
                 closable={false}
                 onClose={onCloseDrawer}
                 visible={visible}
