@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'flowbite';
+import './input.css'
+import './output.css'
 import './index.css';
 import 'antd/dist/antd.css';
 import App from './App';
